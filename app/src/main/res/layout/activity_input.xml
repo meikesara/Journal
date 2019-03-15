@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InputActivity">
+
+    <EditText
+        android:id="@+id/inputTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="title"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="textPersonName"
+        android:text="Title"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/inputContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:gravity="top"
+        android:inputType="textPersonName"
+        android:text="Content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/happy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:onClick="selectMood"
+            android:padding="10dp"
+            app:srcCompat="@drawable/happy" />
+
+        <ImageButton
+            android:id="@+id/sad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:onClick="selectMood"
+            android:padding="10dp"
+            app:srcCompat="@drawable/sad" />
+
+        <ImageButton
+            android:id="@+id/angry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:onClick="selectMood"
+            android:padding="10dp"
+            app:srcCompat="@drawable/angry" />
+
+        <ImageButton
+            android:id="@+id/confused"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:onClick="selectMood"
+            android:padding="10dp"
+            app:srcCompat="@drawable/confused" />
+
+        <ImageButton
+            android:id="@+id/love"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:onClick="selectMood"
+            android:padding="10dp"
+            app:srcCompat="@drawable/love" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/inputSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="casual"
+        android:onClick="addEntry"
+        android:text="Submit entry!"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
