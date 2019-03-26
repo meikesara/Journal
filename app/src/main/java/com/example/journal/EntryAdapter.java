@@ -17,6 +17,7 @@ public class EntryAdapter extends ResourceCursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
 
+        // Initialise variables
         int columnIndex;
         TextView title = view.findViewById(R.id.title);
         TextView timestamp = view.findViewById(R.id.date);

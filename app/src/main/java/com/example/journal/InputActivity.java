@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class InputActivity extends AppCompatActivity {
 
+    // Initialise variables
     String selectedMood = "";
     ImageButton happy, angry, sad, confused, love;
 
@@ -19,12 +20,14 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
+        // Find the imagebuttons
         happy = findViewById(R.id.happy);
         angry = findViewById(R.id.angry);
         sad = findViewById(R.id.sad);
         confused = findViewById(R.id.confused);
         love = findViewById(R.id.love);
 
+        // Check if saved instance state is not empty and get the mood and set the backgroundcolor accordingly
         if (savedInstanceState != null) {
             selectedMood = savedInstanceState.getString("mood");
 
@@ -74,16 +77,19 @@ public class InputActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else {
+            // Let user know that the fields must be filled in
             Toast.makeText(this, "All fields must be filled in!", Toast.LENGTH_SHORT).show();
         }
 
 
     }
 
+    // Create a Bundle outstate if device is rotated
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
+        // Put the mood into the bundle
         String mood = selectedMood;
         outState.putString("mood", mood);
     }
@@ -118,6 +124,7 @@ public class InputActivity extends AppCompatActivity {
                 selectedMood = "love";
                 break;
         }
+        // Set the BackgroundColor of the ImageButton that was pressed to black
       view.setBackgroundColor(Color.BLACK);
     }
 }
