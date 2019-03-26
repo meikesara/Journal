@@ -22,6 +22,7 @@ public class EntryDatabase extends SQLiteOpenHelper {
         // Create table when app is created
         String create = "CREATE TABLE entries (_id INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT NOT NULL, content TEXT NOT NULL, mood TEXT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);";
         db.execSQL(create);
+
     }
 
     @Override

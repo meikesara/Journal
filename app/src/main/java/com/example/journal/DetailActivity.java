@@ -15,20 +15,21 @@ public class DetailActivity extends AppCompatActivity {
 
         // Get the intent
         Intent intent = getIntent();
+        JournalEntry journalEntry = (JournalEntry) intent.getSerializableExtra("journal");
 
         // Get and set the title, date and content
         TextView title = findViewById(R.id.outputTitle);
         TextView date = findViewById(R.id.outputDate);
         TextView content = findViewById(R.id.outputContent);
 
-        title.setText(intent.getStringExtra("title"));
-        date.setText(intent.getStringExtra("timestamp"));
-        content.setText(intent.getStringExtra("content"));
+        title.setText(journalEntry.getTitle());
+        date.setText(journalEntry.getTimestamp());
+        content.setText(journalEntry.getContent());
 
         // Get and set the mood
         ImageView mood = findViewById(R.id.outputMood);
 
-        switch (intent.getStringExtra("mood")) {
+        switch (journalEntry.getMood()) {
             default:
                 mood.setImageResource(R.drawable.happy);
                 break;
@@ -41,6 +42,11 @@ public class DetailActivity extends AppCompatActivity {
             case "sad":
                 mood.setImageResource(R.drawable.sad);
                 break;
+            case "love":
+                mood.setImageResource(R.drawable.love);
+                break;
+            case "confused":
+                mood.setImageResource(R.drawable.confused);
         }
     }
 }

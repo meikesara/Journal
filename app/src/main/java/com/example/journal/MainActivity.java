@@ -48,11 +48,14 @@ public class MainActivity extends AppCompatActivity {
             Cursor cursor = (Cursor) parent.getItemAtPosition(position);
 
             // Create the intent and put in story variables
+            String title = cursor.getString(cursor.getColumnIndex("title"));
+            String content = cursor.getString(cursor.getColumnIndex("content"));
+            String mood = cursor.getString(cursor.getColumnIndex("mood"));
+            String timestamp = cursor.getString(cursor.getColumnIndex("timestamp"));
+            JournalEntry journalEntry = new JournalEntry(null, title, content, mood, timestamp);
+
             Intent intent  = new Intent(getApplicationContext(), DetailActivity.class);
-            intent.putExtra("title", cursor.getString(cursor.getColumnIndex("title")));
-            intent.putExtra("content", cursor.getString(cursor.getColumnIndex("content")));
-            intent.putExtra("mood", cursor.getString(cursor.getColumnIndex("mood")));
-            intent.putExtra("timestamp", cursor.getString(cursor.getColumnIndex("timestamp")));
+            intent.putExtra("journal", journalEntry );
 
             // Start the activity
             startActivity(intent);

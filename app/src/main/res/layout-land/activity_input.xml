@@ -8,11 +8,12 @@
     tools:context=".InputActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Fill in the title:" />
+        android:text="Fill in the title:"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/inputTitle"
@@ -24,14 +25,15 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp" />
+        android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="What happened today?" />
+        android:text="What happened today?"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/inputContent"
@@ -45,11 +47,12 @@
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="What mood best describes your journal entry?" />
+        android:text="What mood best describes your journal entry?"
+        android:textSize="10sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,18 +63,17 @@
 
         <ImageButton
             android:id="@+id/happy"
-            android:layout_width="60dp"
+            android:layout_width="1dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:background="@android:color/white"
             android:onClick="selectMood"
-            android:padding="5dp"
             app:srcCompat="@drawable/happy" />
 
         <ImageButton
             android:id="@+id/sad"
-            android:layout_width="60dp"
+            android:layout_width="1dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="0dp"
@@ -83,7 +85,7 @@
 
         <ImageButton
             android:id="@+id/angry"
-            android:layout_width="60dp"
+            android:layout_width="1dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="0dp"
@@ -95,7 +97,7 @@
 
         <ImageButton
             android:id="@+id/confused"
-            android:layout_width="60dp"
+            android:layout_width="1dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="0dp"
@@ -107,7 +109,7 @@
 
         <ImageButton
             android:id="@+id/love"
-            android:layout_width="60dp"
+            android:layout_width="1dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="0dp"
